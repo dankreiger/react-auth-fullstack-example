@@ -20,7 +20,7 @@ npm install
    };
    ```
 
-2. Run dev sets
+2. Run dev server
 
    ```sh
      npm run dev
