@@ -1,13 +1,14 @@
 import React from 'react';
 import { IAppProps } from './App.interface';
 import Header from '../components/Header';
+import { AppRouteWrapper, AppWrapper } from './App.styles';
 
 const App: React.FC<IAppProps> = ({ children }) => {
   return (
-    <div className="App">
+    <AppWrapper>
       <Header />
-      {children}
-    </div>
+      <AppRouteWrapper>{children}</AppRouteWrapper>
+    </AppWrapper>
   );
 };
 
