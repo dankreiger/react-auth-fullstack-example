@@ -1,0 +1,38 @@
+{
+  "name": "fullstack-react-example",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "client:install": "npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "server:install": "npm install --prefix server",
+    "sort": "sort-package-json",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start:install": "concurrently \"npm run server:install\" \"npm run client:install\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "4.1.1",
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "husky": "3.0.2",
+    "lint-staged": "9.2.1",
+    "prettier": "1.18.2",
+    "sort-package-json": "1.22.1"
+  }
+}
