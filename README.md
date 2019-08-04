@@ -1,7 +1,7 @@
 ### Prerequisites
 
 - make sure [mongodb](https://www.mongodb.com/) is installed locally
-- node v12.7.0
+- make sure you have `node v12.7.0` installed
 - create server/config/secrets.js file with secret string
   ```js
   // Hold application secrets
